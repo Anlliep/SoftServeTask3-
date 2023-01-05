@@ -1,2 +1,0 @@
-D:\Visual Projects\C++\Task3.2\x64\Debug\Task3.2.exe
-D:\Visual Projects\C++\Task3\x64\Debug\Task3.exe
