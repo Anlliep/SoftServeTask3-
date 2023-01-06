@@ -19,7 +19,7 @@ int main()
 		thread_pool.push([](std::string* file, AllStatistics* statistics)
 			{
 				std::ifstream fin = std::ifstream(*file);
-				auto result = Analysis(fin);
+				FileAnalysis result = Analysis(fin);
 				statistics->addStatisticsFromAnalysis(result);
 			}, &path.m_path_to_files[i], &statistics);
 	}
