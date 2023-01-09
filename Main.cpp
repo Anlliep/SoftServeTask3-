@@ -9,9 +9,10 @@ int main()
 	ThreadPool thread_pool;
 	std::vector<std::thread> threads;
 	thread_pool.pushThreads(thread_pool, threads);
-
+	
 	PathToFolder path;
 	path.getPathToFilesFromDirectory();
+	
 	AllStatistics statistics;
 
 	for (int i = 0; i < path.m_path_to_files.size(); i++)
