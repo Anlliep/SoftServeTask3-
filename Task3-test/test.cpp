@@ -43,8 +43,8 @@ TEST(FileAnalysis, Analysis2)
 
 TEST(FileAnalysis, Analysis3)
 {
-	std::string path = "D:\\Visual Projects\\C++\\Task3\\Task3-test\\TestFiles\\Test3cpp";
-	FileAnalysis expected = { 1, 9, 10 };
+	std::string path = "D:\\Visual Projects\\C++\\Task3\\Task3-test\\TestFiles\\Test3.cpp";
+	FileAnalysis expected = { 3, 5, 6 };
 	FileAnalysis result = Analysis(path);
 	EXPECT_EQ(result.blank_lines, expected.blank_lines);
 	EXPECT_EQ(result.comment_lines, expected.comment_lines);

@@ -1,0 +1,5 @@
+count of files were processed: 1
+blank_lines: 1
+comment_lines: 9
+code_lines: 10
+duration: 0.0063202s

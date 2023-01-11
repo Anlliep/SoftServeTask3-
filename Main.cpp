@@ -4,6 +4,7 @@
 #include "FileAnalysis.h"
 #include "ThreadPool.h"
 
+
 int main()
 {
 	ThreadPool thread_pool;
@@ -12,21 +13,16 @@ int main()
 
 	PathToFolder path;
 	path.getPathToFilesFromDirectory();
-
 	AllStatistics statistics;
 
-	/*for (size_t i = 0; i < path.m_path_to_files.size(); i++)
-	{
-		std::ifstream fin = std::ifstream(path.m_path_to_files[i]);
-		statistics.addStatisticsFromAnalysis(Analysis(fin));
-	}*/
+	//for (const auto& file : path.m_path_to_files)
+	//	statistics.addStatisticsFromAnalysis(Analysis(file));
+
 	for (int i = 0; i < path.m_path_to_files.size(); i++)
 	{
 		thread_pool.push([](std::string* file, AllStatistics* statistics)
 			{
-				std::ifstream fin = std::ifstream(*file);
-				FileAnalysis result = Analysis(fin);
-				statistics->addStatisticsFromAnalysis(result);
+				statistics->addStatisticsFromAnalysis(Analysis(*file));
 			}, &path.m_path_to_files[i], &statistics);
 	}
 
