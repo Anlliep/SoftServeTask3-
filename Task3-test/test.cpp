@@ -7,13 +7,13 @@
 #include "../ThreadPool.h"
 #include "../ThreadPool.cpp"
 
-// Task1 
+// Test1 
 // blank_lines 5, comment_lines 5, code_lines 10
 //
-// Task2
+// Test2
 // blank_lines 1, comment_lines 9, code_lines 10
 // 
-// Task3
+// Test3
 // blank_lines 3, comment_lines 5, code_lines 6
 
 // Total_lines
